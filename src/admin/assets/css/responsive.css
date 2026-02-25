@@ -1,0 +1,21 @@
+/* Mobile Screen CSS  */
+@media (max-width: 767px){
+    /* Header CSS Start  */
+    .mngmntHeader .main-logo-sec{padding-top:10px;flex-direction:column-reverse;align-items:baseline;}
+    .mngmntHeader{position: relative;}
+    .mngmntHeader .brand-logo-sec{padding-top:80px;}
+    .account-details{width:fit-content;}
+    .togglemenuSection{padding:16px;}
+    .mngmntHeader .brand-logo-sec{margin:0 auto;padding:0 0px 15px 15px;}
+    .mngmntHeader .account-details{position:absolute;bottom:15px;right:15px;}
+    /* side pannel css start  */
+    .sidePanel{position:absolute;width:277px;}
+    .sidePanel, .sidePanel .leftPanel{width:277px;height:100vh;}
+}
+/* Tablet CSS Start  */
+@media screen and (max-width: 991px) and (min-width: 768px){
+ /* Side pannel CSS Start  */
+    .sidePanel{position: absolute;width:40%;box-shadow: 5px 8px 20px 0px rgb(0 0 0 / 55%);}
+    .sidePanel .leftPanel{width: 307px;}
+    /* Side pannel CSS End  */
+}

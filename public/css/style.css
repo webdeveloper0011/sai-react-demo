@@ -1,0 +1,365 @@
+@charset "utf-8";
+/* __________________ */
+@font-face {font-family: 'noto_sansbold'; src: url('../fonts/notosans-bold-webfont.woff2') format('woff2'), url('../fonts/notosans-bold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed'; src: url('../fonts/notosans-condensed-webfont.woff2') format('woff2'), url('../fonts/notosans-condensed-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_bold'; src: url('../fonts/notosans-condensedbold-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedbold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_extrabold';src: url('../fonts/notosans-condensedextrabold-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedextrabold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_extralight';src: url('../fonts/notosans-condensedextralight-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedextralight-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_light';src: url('../fonts/notosans-condensedlight-webfont.woff2') format('woff2'),url('../fonts/notosans-condensedlight-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_medium';src: url('../fonts/notosans-condensedmedium-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedmedium-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_semibold';src: url('../fonts/notosans-condensedsemibold-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedsemibold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansextrabold';src: url('../fonts/notosans-extrabold-webfont.woff2') format('woff2'), url('../fonts/notosans-extrabold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansitalic';src: url('../fonts/notosans-italic-webfont.woff2') format('woff2'), url('../fonts/notosans-italic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanslight';src: url('../fonts/notosans-light-webfont.woff2') format('woff2'), url('../fonts/notosans-light-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face { font-family: 'noto_sansmedium'; src: url('../fonts/notosans-medium-webfont.woff2') format('woff2'),url('../fonts/notosans-medium-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansregular';src: url('../fonts/notosans-regular-webfont.woff2') format('woff2'), url('../fonts/notosans-regular-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemibold';src: url('../fonts/notosans-semibold-webfont.woff2') format('woff2'), url('../fonts/notosans-semibold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemicondensed';src: url('../fonts/notosans-semicondensed-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensed-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemicondensed_bold';src: url('../fonts/notosans-semicondensedbold-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensedbold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemicondensed_light';src: url('../fonts/notosans-semicondensedlight-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensedlight-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemicondensed_medium';src: url('../fonts/notosans-semicondensedmedium-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensedmedium-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansSCnSBd';src: url('../fonts/notosans-semicondensedsemibold-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensedsemibold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansthin';src: url('../fonts/notosans-thin-webfont.woff2') format('woff2'), url('../fonts/notosans-thin-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+/* ____________ */
+
+*{padding: 0;margin: 0;box-sizing: border-box;}
+html{scroll-behavior:smooth}
+body{font-family: 'noto_sansregular';font-weight:500;font-size:14px}
+
+a{text-decoration: none;color: #000;}
+ul{list-style:none;padding:0;margin-bottom: 0;}
+.txt-red{color:#f84f00}
+
+/* Button CSS Start  */
+.comn-btn{display:inline-block;transition:all 0.5s ease-in-out 0s;-webkit-transition:all 0.5s ease-in-out 0s;border-radius: 15px;position:relative;overflow:hidden;background-color: #000080;color: #FFF;border: none;padding: 10px 20px;font-size: 14px;}
+.comn-btn:before{left:-20px;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}
+.comn-btn:after{right:-20px;-webkit-transform:translate(50%, -50%);transform:translate(50%, -50%)}
+.comn-btn:before, .comn-btn:after{position:absolute;top:50%;content:"";width:20px;height:20px;background-color: #0D48BE;border-radius:50%}
+.comn-btn:after, .comn-btn:before{z-index:-1;transition:all 0.5s ease-in-out 0s;-webkit-transition:all 0.5s ease-in-out 0s}
+.comn-btn:hover{color:#fff;z-index:1}
+.comn-btn:hover:before{-webkit-animation:criss-cross-left 0.8s both;animation:criss-cross-left 0.8s both;-webkit-animation-direction:alternate;animation-direction:alternate}
+.comn-btn:hover:after{-webkit-animation:criss-cross-right 0.8s both;animation:criss-cross-right 0.8s both;-webkit-animation-direction:alternate;animation-direction:alternate}
+@keyframes criss-cross-left {
+    0%{left:-20px}
+    50% {left:50%;width:20px;height:20px}
+    100%{left:50%;width: 500px;height:375px}
+}
+@keyframes criss-cross-right {
+    0%{right:-20px}
+    50%{right:50%;width:20px;height:20px}
+    100%{right:50%;width:375px;height:375px}
+}
+.comn-btn i {padding-right: 8px;}
+.transparent-btn {background: transparent;color: #000000;}
+.transparent-btn:hover{color: #f84f00;}
+.transparent-btn:before, .transparent-btn:after{ background: #fff9ec;}
+.gradient-btn{background: linear-gradient(139deg,rgba(255, 104, 0, 1) 0%, rgba(245, 75, 0, 1) 49%, rgba(230, 114, 0, 1) 100%);color: #fff;}
+.gradient-btn:before, .gradient-btn:after{ background: #fff9ec;}
+.gradient-btn:hover{color: #f84f00;}
+.gray-btn {background: #e5e5e8;color: #000;}
+.gray-btn:before, .gray-btn:after{ background: linear-gradient(139deg,rgba(255, 104, 0, 1) 0%, rgba(245, 75, 0, 1) 49%, rgba(230, 114, 0, 1) 100%);color: #fff;}
+/* Button CSS End  */
+
+/* Start Loader Animation */
+#loader-wrapper {position: fixed;top: 0px;left: 0;width: 100%;height: 100%;background-color: #ffffff;background-image: url('../images//sai_logo.svg');background-repeat: no-repeat;background-position: center;z-index: 100000;background-size: 7%;}
+#loader {display: block;position: relative;left: 49%;top: 49%;width: 270px;height: 270px;margin: -120px 0 0 -120px;border-radius: 50%;border: 3px solid transparent;border-top-color: #3498db;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
+#loader:before {content: "";position: absolute;top: 5px;left: 5px;right: 5px;bottom: 5px;border-radius: 50%;border: 3px solid transparent;border-top-color: #e74c3c;-webkit-animation: spin 3s linear infinite;animation: spin 3s linear infinite;}
+#loader:after {content: "";position: absolute;top: 15px;left: 15px;right: 15px;bottom: 15px;border-radius: 50%;border: 3px solid transparent;border-top-color: #f9c922;-webkit-animation: spin 1.5s linear infinite;animation: spin 1.5s linear infinite;}
+@-webkit-keyframes spin {
+0% {-webkit-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);}
+100% {-webkit-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);}
+}
+@keyframes spin {
+0% {-webkit-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);}
+100% {-webkit-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);}
+}
+/* Close Loader  */
+
+/* Logo Section CSS Start  */
+.logo-sec-wrapper .logo-area {
+    display: flex;
+}
+.logo-sec-wrapper .logo-area .sai-logo-sec {
+    display: block;
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 1px solid #ccc;
+}
+.logo-sec-wrapper .logo-area .sai-logo {
+    width: 85px;
+}
+a.logo-align img{width:41px;}
+.brand-text h4{line-height: 16px;text-transform: uppercase;margin-bottom: 0;font-size: 12px;font-family: 'noto_sansbold';}
+a.logo-align {display:flex;align-items:center;gap:8px;}
+.brand-text h4 span{display:block;font-family: 'noto_sansmedium';}
+.logo-sec-wrapper{padding:15px 0;border-bottom: 1px solid #efeded;background: #fff;}
+/* Logo Section CSS End  */
+/* Main Menu Start  */
+.logo-wrapper-ryt{display:flex;align-items:center;justify-content: end;gap: 20px;}
+.menu-sec .custom-nav .container-fluid {padding:0!important;}
+.custom-nav ul.navbar-nav .nav-item{position:relative;font-family: 'noto_sansmedium';}
+.custom-nav .submenus .nav-item:last-child{border-bottom:none}
+.custom-nav .submenus{position:absolute;min-width:200px;box-shadow:0px 13px 20px 0px rgb(153 153 153 / 48%);z-index:99;background:#fff;height:0;overflow:hidden;}
+.custom-nav .submenus a.nav-link{
+    padding: 9px 12px;
+    border-radius: 5px;
+}
+.custom-nav .submenus a.nav-link:hover{background: #fffceb;color: #f95700;outline: 1px solid #fd63021c;}
+.custom-nav .submenus .submenus{left:100%;top:5px;box-shadow: 9px 9px 20px 0px rgb(153 153 153 / 48%) !important;}
+.custom-nav ul.navbar-nav .nav-item:hover > .submenus{height:auto;animation:submenu-expand 0.4s forwards;padding: 10px;}
+ @keyframes submenu-expand {
+    0%{max-height:0px; }
+   100%{max-height: 500px;overflow:visible;}
+}
+.custom-nav .navbar-nav > .nav-item > .nav-link.active, .custom-nav .navbar-nav > .nav-item > .nav-link:hover, .custom-nav .navbar-nav > .nav-item > .nav-link:focus{color: #f85000 !important;}
+.custom-nav .navbar-nav > .nav-item > .nav-link{padding: 6px 9px;position: relative;font-size: 14px;}
+.custom-nav .navbar-nav > .nav-item > .nav-link:before{content:'';position:absolute;bottom:0;left:30%;width:0;height:2px;background: #f95600;transition:0.4s;}
+.custom-nav .navbar-nav > .nav-item > .nav-link.active:before, .custom-nav .navbar-nav > .nav-item > .nav-link:hover:before, .custom-nav .navbar-nav > .nav-item > .nav-link:focus:before{width:40%;transition:0.4s;}
+.custom-nav .nav-link{color:#000;}
+/* Main Menu End  */
+
+
+/* Login Area CSS Start  */
+.login-pg-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fffcea;
+}
+.login-box-head {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.login-box-head .star-blinks-img {
+    width: 50px;
+    height: 50px;
+    filter: invert(73%) sepia(42%) saturate(620%) hue-rotate(345deg);
+    animation: softBlink 5s ease-in-out infinite;
+}
+@keyframes softBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.login-box .login-box-head {
+    background: linear-gradient(139deg, rgba(255, 104, 0, 1) 0%, rgba(245, 75, 0, 1) 49%, rgba(230, 114, 0, 1) 100%);
+    color: #fff;
+    padding: 13px 25px;
+}
+
+.login-box-head h1.httxt {
+    font-family: 'noto_sanssemibold';
+    margin-bottom: 6px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.login-box-head p.sub-txt {
+    font-size: 15px;
+    color: #ffe2cb;
+    margin: 0;
+}
+
+.login-area {
+    background: #fffceb;
+    padding: 50px 0;
+}
+
+.login-box {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 6px 59px 0px rgb(172 172 172 / 72%);
+}
+
+.login-box .login-box-main {
+    padding: 40px 25px;
+}
+/* form starting stylings ------------------------------- */
+.group {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.group input {
+    font-size: 14px!important;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 8px 12px;
+}
+
+.group input:focus {
+    outline: none;
+    border-color: #f25001;
+    box-sizing: border-box;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none !important;
+}
+
+.group label {
+    color: rgb(0 0 0 / 88%);
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 !important;
+    position: absolute;
+    pointer-events: none;
+    left: 14px;
+    top: 8px;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+}
+
+.group input:focus + label, .group input:not(:placeholder-shown) + label, .group input:active + label {
+    top: -10px;
+    left: 14px;
+    font-size: 12px;
+    padding: 0px 4px;
+    color: #f25001;
+    background-color: #fff;
+}
+
+.group textarea:focus + label, .group textarea:not(:placeholder-shown) + label, .group textarea:active + label {
+    top: -10px;
+    left: 14px;
+    font-size: 12px;
+    padding: 0px 4px;
+    color: #00a2db;
+    background-color: #fff;
+}
+.selectgroup {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.selectgroup select {
+    font-size: 14px!important;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+}
+
+.selectgroup select:focus + label, .selectgroup select:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 14px;
+    font-size: 12px;
+    padding: 0px 4px;
+    color: #00a2db;
+    background-color: #fff;
+}
+
+.group textarea:focus {
+    outline: none;
+    border: 1px solid #00a2db;
+    box-sizing: border-box;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none !important;
+}
+
+/* ----------  */
+.capcha-img p {
+    background: #000;
+    color: #fff;
+    text-decoration: line-through;
+    font-size: 14px;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.capcha-reloder {
+    margin-top: 9px;
+}
+.login-box .login-box-main .comn-btn:hover {
+    box-shadow: 0px 10px 32px 0px rgb(243 79 1 / 24%);
+    transform: scale(1.05);
+}
+/* Login Box End  */
+/* Footer Start  */
+.footer-area{background:rgb(56,54,54);padding:27px 0;}
+.footer-area p{color:#fff;margin-bottom:12px;font-size: 14px;line-height:20px;}
+.footer-area p:last-child{margin-bottom:0;}
+.footer-area .visitrs-sec p{margin:0;}
+.footer-area .visitrs-sec{display:flex;justify-content:end;}
+.footer-area .visitrs-sec p{padding-right: 15px;margin-right:15px;border-right:1px solid #ccc;}
+.footer-area .bottom-ftr-links a{padding: 0px 5px;font-size:14px;border-right:1px solid #ccc;color:#fff;text-wrap:nowrap;margin-bottom:10px;}
+.footer-area .bottom-ftr-links a:last-child{padding-right:0;border-right:0;}
+.footer-area .bottom-ftr-links{display: flex;justify-content:end;flex-wrap:wrap;}
+.footer-area .bottom-ftr-links a:first-child{padding-left:0;}
+.footer-area .visitrs-sec p:last-child{padding-right:0;margin-right:0;border-right:none;}
+/* Footer End  */   
+
+/* Registration Page CSS START  */
+.checkbox-highlight {
+    border-color: #f3520321;
+    background: #fffceb52;
+    padding: 9px 13px;
+}
+.already-register-btn i {
+    background: #f44d01;
+    padding: 11px 12.13px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+.already-register-btn {
+    border: 1px solid #f34d02;
+    padding: 14px 19px;
+    font-size: 14px;
+}
+.checkbox-highlight label.form-check-label {
+    font-size: 14px;
+}
+form#regsiterform button.comn-btn.gray-btn {
+    padding: 14px 19px;
+    font-size: 15px;
+}
+form#regsiterform .button-row .already-register-btn {
+    float: right;
+}
+.form-err-msg {
+    color: red;
+}
+
+.input-error {
+    border-color: red;
+    box-shadow: inset 0px 0px 4px 20px rgb(255 0 0 / 9%);
+}
+
+/* Registration Page CSS End  */
+
+
+
+
+/* Responsive CSS Start  */
+/* Mobile Screen CSS  */
+@media (max-width: 767px){
+    /* Header CSS Start  */
+    .logo-wrapper-ryt {justify-content: space-between;margin-top: 15px;}
+    .navbar-collapse.custom-nav {position: absolute;top: 40px;background: linear-gradient(139deg, rgba(255, 104, 0, 1) 0%, rgba(245, 75, 0, 1) 49%, rgba(230, 114, 0, 1) 100%);z-index:9;box-shadow: 0px 5px 11px 0px rgb(175 175 175);}
+    .menu-sec {position: relative;}
+    .navbar-collapse.custom-nav .nav-item  .nav-link {white-space:nowrap;padding:10px 15px;color:#fff;}
+    .navbar-collapse.custom-nav .nav-item + .nav-item .nav-link {border-top: 1px solid #f0f0f04d;}
+    .menu-sec button.navbar-toggler {padding:4px 11px;border-radius:6px;border:1px solid #fb5d00;}
+    .menu-sec button.navbar-toggler .navbar-toggler-icon {transform: scale(0.95);}
+    /* Registration page css  */
+    form#regsiterform .button-row .already-register-btn {float: none;}
+    form#regsiterform .button-row {text-align:center;gap:15px;}
+}
+/* Tablet CSS Start  */
+@media screen and (max-width: 991px) and (min-width: 768px){
+    .login-btn-sec {display:flex;}
+    .logo-wrapper-ryt {margin-top: 15px;flex-direction: row-reverse;}
+    .navbar-collapse.custom-nav {position: absolute;right: 0;top: 40px;background: linear-gradient(139deg, rgba(255, 104, 0, 1) 0%, rgba(245, 75, 0, 1) 49%, rgba(230, 114, 0, 1) 100%);z-index:9;box-shadow: 0px 5px 11px 0px rgb(175 175 175);}
+    .menu-sec {position: relative;}
+    .navbar-collapse.custom-nav .nav-item  .nav-link {white-space:nowrap;padding:10px 15px;color:#fff;}
+    .navbar-collapse.custom-nav .nav-item + .nav-item .nav-link {border-top: 1px solid #f0f0f04d;}
+    .menu-sec button.navbar-toggler {padding:4px 11px;border-radius:6px;border:1px solid #fb5d00;}
+    .menu-sec button.navbar-toggler .navbar-toggler-icon {transform: scale(0.95);}
+}

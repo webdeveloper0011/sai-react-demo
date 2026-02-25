@@ -1,0 +1,426 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+
+/* __________________ */
+@font-face {font-family: 'noto_sansbold'; src: url('../fonts/notosans-bold-webfont.woff2') format('woff2'), url('../fonts/notosans-bold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed'; src: url('../fonts/notosans-condensed-webfont.woff2') format('woff2'), url('../fonts/notosans-condensed-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_bold'; src: url('../fonts/notosans-condensedbold-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedbold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_extrabold';src: url('../fonts/notosans-condensedextrabold-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedextrabold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_extralight';src: url('../fonts/notosans-condensedextralight-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedextralight-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_light';src: url('../fonts/notosans-condensedlight-webfont.woff2') format('woff2'),url('../fonts/notosans-condensedlight-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_medium';src: url('../fonts/notosans-condensedmedium-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedmedium-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanscondensed_semibold';src: url('../fonts/notosans-condensedsemibold-webfont.woff2') format('woff2'), url('../fonts/notosans-condensedsemibold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansextrabold';src: url('../fonts/notosans-extrabold-webfont.woff2') format('woff2'), url('../fonts/notosans-extrabold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansitalic';src: url('../fonts/notosans-italic-webfont.woff2') format('woff2'), url('../fonts/notosans-italic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanslight';src: url('../fonts/notosans-light-webfont.woff2') format('woff2'), url('../fonts/notosans-light-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face { font-family: 'noto_sansmedium'; src: url('../fonts/notosans-medium-webfont.woff2') format('woff2'),url('../fonts/notosans-medium-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansregular';src: url('../fonts/notosans-regular-webfont.woff2') format('woff2'), url('../fonts/notosans-regular-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemibold';src: url('../fonts/notosans-semibold-webfont.woff2') format('woff2'), url('../fonts/notosans-semibold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemicondensed';src: url('../fonts/notosans-semicondensed-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensed-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemicondensed_bold';src: url('../fonts/notosans-semicondensedbold-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensedbold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemicondensed_light';src: url('../fonts/notosans-semicondensedlight-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensedlight-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sanssemicondensed_medium';src: url('../fonts/notosans-semicondensedmedium-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensedmedium-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansSCnSBd';src: url('../fonts/notosans-semicondensedsemibold-webfont.woff2') format('woff2'), url('../fonts/notosans-semicondensedsemibold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'noto_sansthin';src: url('../fonts/notosans-thin-webfont.woff2') format('woff2'), url('../fonts/notosans-thin-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+/* ____________ */
+
+html{scroll-behavior:smooth}
+body{font-family: 'noto_sansregular';font-weight:500;font-size:14px;background: #edeef2;}
+
+a {text-decoration:none;color: #000000;}
+a:focus { outline:thin dotted }
+a:hover, a:active { outline: 0; }
+a:hover { text-decoration:none; color:#393939; transition: all 0.3s; }
+p, h1, h2, h3, h4, h5, h6, ul, ol, dd, table, fieldset, address { margin:0; padding:0; }
+
+/* Header CSS Start  */
+.mngmntHeader{
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 0px 20px 0px 0px;
+    box-shadow: 0px 3px 6px 0px #00000029;
+    margin-bottom: 15px;
+    border-radius: 0px 0px 26px 26px;
+}
+.mngmntHeader, .mngmntHeader .togglemenuSection {
+    transition: border-radius 0.4s;
+}
+.mngmntHeader.side-menu-show , .mngmntHeader.side-menu-show .togglemenuSection{border-bottom-left-radius:0px!important;transition:border-radius 0.4s;}
+/* Left Menu Toggle CSS Start */
+.togglemenuSection{/* float:left; */height: 100% !important;background: #000080;padding: 22px;border-bottom-left-radius: 26px;margin-right: 12px;display: flex;align-items: center;justify-content: center;}
+#topnav-hamburger-icon{height: 34px;width:40px;position:relative;background: transparent;border-radius:3px}
+.hamburger-icon{width: 34px;height: 22px;cursor:pointer;display:inline-block;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto}
+.hamburger-icon span{background-color: #ffffff;position:absolute;border-radius:2px;-webkit-transition:.2s cubic-bezier(.8,.5,.2,1.4);transition:.2s cubic-bezier(.8,.5,.2,1.4);width:100%;height:2px;display:block;left:0}
+.hamburger-icon span:nth-child(1){top:0;width:80%}
+.hamburger-icon span:nth-child(2){top: 10px;}
+.hamburger-icon span:nth-child(3){bottom:0;width:60%}
+.hamburger-icon.hide{-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}
+.hamburger-icon.hide span:nth-child(1){left:1px;top: 5px;width:20px;-webkit-transform:rotate(90deg);transform:rotate(90deg);-webkit-transition-delay:150ms;transition-delay:150ms}
+.hamburger-icon.hide span:nth-child(2){left:3px;top:13px;width:10px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-transition-delay:50ms;transition-delay:50ms}
+.hamburger-icon.hide span:nth-child(3){left:9px;top:13px;width:10px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transition-delay:.1s;transition-delay:.1s}
+.sidePanel.hide {width:0%;overflow: hidden;}
+.mainPanel.hide {padding-left:0%;z-index:9}
+.sidePanel, .mainPanel.hide{transition:.2s}
+.hamburger-icon.hide {
+    top: -15px;
+}
+/* Left Menu Toggle CSS End */
+/* Logo Area Start */
+.mngmntHeader .main-logo-sec {
+    display: flex;
+}
+.mngmntHeader .brand-logo-sec{display: flex;padding: 6px 0;}
+.mngmntHeader .brand-logo-sec .sai-logo-sec {
+    display: block;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+.mngmntHeader .brand-logo-sec .sai-logo {
+    width: 85px;
+}
+a.logo-align img{width:70px;}
+.brand-text h4{line-height: 19px;text-transform: uppercase;margin-bottom: 0;font-size: 14px;font-family: 'noto_sansbold';}
+a.logo-align {display:flex;align-items:center;}
+.brand-text h4 span{display:block;font-family: 'noto_sansmedium';}
+/* Header CSS End  */
+/* Header User Details Area Start  */
+.mngmntHeader .userDetail i {
+    margin: 0 4px;
+    font-size: 12px;
+    color: #003e69b5;
+}
+
+.account-details {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.userDetail {
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'noto_sanssemibold';
+    color: #fff;
+    position: relative;
+}
+.userName {
+    color: #000080;
+    margin-bottom: 0;
+    font-size: 0.9375em;
+    font-family: 'noto_sansregular';
+    line-height: 0.9375em;
+}
+.user-action-sec {
+    position: absolute;
+    z-index: 99;
+    width: 150px;
+    padding: 12px 0 0;
+    background: #ff000000;
+    top: 13px;
+    display: none;
+}
+.user-action-sec {
+    position: absolute;
+    z-index: 99;
+    width: 150px;
+    padding: 12px 0 0;
+    background: #ff000000;
+    top: 13px;
+    display: none;
+}
+.user-action-sec:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 19px;
+    height: 10px;
+    width: 16px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #0e41b3;
+}
+.user-action-sec ul {
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    border-radius: 15px;
+    background: #000080;
+}
+.mngmntHeader .userDetail:hover .user-action-sec {
+    display: block;
+}
+.user-action-sec ul a {
+    padding: 7px 12px;
+    display: block;
+    color: #fff;
+    font-size: 0.875em;
+}
+.user-action-sec ul li + li {
+    border-top: 1px solid #ccc;
+}
+.user-action-sec ul a:hover {
+    background: #032d80;
+}
+.mngmntHeader .userImgWrap {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.mngmntHeader .userImg {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+.mngmntHeader .userInfo a {
+    display: inline-block;
+    color: #BCBCCB;
+    font-size: 16px;
+    padding: 5px 9px;
+    line-height: 24px;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    transition: background 0.4s;
+}
+.bell {
+    position: relative;
+}
+.ringing{-webkit-animation: ring 8s 1s ease-in-out infinite; -webkit-transform-origin: 50% 4px; -moz-animation: ring 8s 1s ease-in-out infinite;  -moz-transform-origin: 50% 4px;  animation: ring 8s 1s ease-in-out infinite;}
+.bell .count {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    background: #FFC06A;
+    font-size: 0;
+    font-family: 'noto_sanssemibold';
+    text-align: center;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    line-height: 16px;
+}
+/* Header User Details Area End  */
+
+/* Logo Area End */
+
+/* Main Content CSS Start  */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #ECEEF2;
+    min-height: 100vh;
+}
+.main-content {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+}
+/* Left Pannel CSS Start  */
+.sidePanel, .mainPanel.hide {
+    transition: .2s;
+}
+.sidePanel, .leftPanel {
+    width: 250px;
+}
+.sidePanel {
+    position: relative;
+    left: 0%;
+    top: -15px;
+    z-index: 999;
+    background: #000080;
+    border-radius: 0 26px 26px 0;
+}
+
+.dashLeftNavSection {
+    position: relative;
+    padding-left: 10px;
+    width: 100% !important;
+}
+.dashLeftNavSection .menu-close-sec {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    z-index: 9;
+}
+.dashLeftNavSection .menu-close-sec a.main-menu-close {
+    color: #fff;
+    line-height: 30px;
+}
+.dashLeftNavSection .menu-close-sec .main-menu-close span {
+    line-height: 32px;
+    font-size: 32px;
+}
+.menu-profile-sec {
+    text-align: center;
+    padding: 50px 0;
+}
+.menu-profile-sec .profile-img img {
+    background: #fff;
+    border-radius: 100%;
+    padding: 2px;
+}
+.menu-profile-sec .profile-info {
+    margin: 15px 0 0;
+}
+.menu-profile-sec  .profile-link {
+    font-size: 16px;
+    margin-left: 5px;
+    position: absolute;
+    right: -30px;
+    color: #fff;
+}
+.menu-profile-sec .profile-info h6 {
+    margin: 0;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+a.profile-lnk {
+    font-size: 0.875em;
+    color: #fff;
+}
+.dashboardLeftNav {
+    list-style: none;
+}
+.dashboardLeftNav li + li{margin-top:5px}
+.dashboardLeftNav li a.active, .dashboardLeftNav li a:hover {
+    background: #fff;
+    box-shadow: inset -56px 0px 14px -51px rgba(232, 232, 232, 1);
+    color: #000;
+}
+
+.dashboardLeftNav li a {
+    display: block;
+    color: #ffffff;
+    font-family: 'noto_sansregular';
+    text-decoration: none;
+    padding: 11px 5px 11px 60px;
+    position: relative;
+    border-radius: 20px 0 0 20px;
+    font-size: 0.937em;
+}
+
+/* Left Pannel CSS End  */
+/* Main Pannel CSS Start  */
+.mainPanel {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.dashboard-section {
+    margin: 20px 0;
+}
+.dash-card {
+    background: #fff;
+    padding: 17px;
+    border-radius: 21px;
+    transition: box-shadow 0.6s;
+    box-shadow: 0px 0px 20px 0px rgb(131 131 131 / 42%);
+}
+.title-sec {
+    padding: 10px 0 15px;
+}
+
+.title-sec .unerline-title {
+    font-size: 1.5em;
+    margin: 0;
+    padding-bottom: 15px;
+    color: #000;
+    position: relative;
+    font-family: 'noto_sanssemibold';
+}
+
+.title-sec .unerline-title:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 76px;
+    height: 4px;
+    background:#000080  ;
+}
+
+.custom-table thead th {
+    background: #cbcbcb;
+    padding: 12px 12px;
+}
+
+
+.custom-table thead th, .custom-table tbody td {
+    font-size: 14px;
+}
+/* Main Pannel CSS End  */
+/* pagination css start  */
+.pagination-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination-area  .sowing-pg p {
+    margin: 0;
+    font-size: 1em;
+    color: #000000;
+}
+
+.pagination-inner a.page-link {
+    background: #fff;
+    font-size: 14px;
+    padding: 7px 11px;
+    color: #0D4382;
+    position: relative;
+}
+
+.pagination-inner a.page-link:hover, .pagination-inner a.page-link:focus {
+    background: #000080;
+    color: #fff;
+    box-shadow: none;
+}
+.pagination-inner .page-item:first-child .page-link i, .pagination-inner .page-item:last-child .page-link i {
+    font-size: 18px;
+    line-height: 18px;
+}
+.pagination-inner li.page-item.active a {background: #000080;color: #fff;border-color: #000080;}
+.pagination-inner li.page-item.active {border: none;}
+.pagination-inner .page-item:first-child .page-link {
+    border-radius: 21px 0 0 21px;
+}
+.pagination-inner .page-item:last-child .page-link {
+    border-radius:0 21px 21px 0;
+}
+/* pagination css End  */
+.profile-details label {
+    font-size: 14px;
+    color: #000;font-family: 'noto_sanssemibold';
+}
+
+.profile-details .form-control {
+    font-size: 14px;
+}
+
+.profile-details .form-control:disabled {
+    background: #f4f4f4;
+}
+/* Main Content CSS End  */
+
+/* Footer CSS Start  */
+.footer-sec {
+    padding: 15px 0 20px;
+    text-align: center;
+    color: #333;
+    background: #eceef2;
+    font-size: 1em;
+}
+/* Footer CSS End  */
